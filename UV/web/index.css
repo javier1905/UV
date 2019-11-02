@@ -1,0 +1,42 @@
+.encabezado
+{
+ height: 100px;
+ box-sizing: border-box; 
+}
+.encabezado h1
+{
+ width: 40px;
+ color: grey;
+ margin-top: 15px;
+ margin-left:  auto;
+ margin-right: auto;
+ display: inline-block;
+}
+.contenedorLogueo
+{    
+    width: 40%;
+    display: inline-block;
+    float: right;
+}
+.sinLoguear
+{
+    margin-top: 7px;
+    margin-right: 7px;
+   display: block;    
+   float: right;  
+}
+.logueado{
+    margin-top: 7px;
+    margin-right: 7px;
+   display: block;    
+   float: right;    
+}
+
+.logueado p{
+   clear: both;
+   display: block;
+}
+
+.frenarFloatLeft{
+    clear: both;
+}

@@ -1,0 +1,14 @@
+.formulario{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#cajaError{
+    margin-top: 15px;
+}
+h1{
+    display: block;
+    width: 200px;
+     margin-left: auto;
+    margin-right: auto;
+}
