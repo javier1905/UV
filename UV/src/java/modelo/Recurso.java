@@ -34,7 +34,7 @@ public class Recurso {
         return archivo;
     }
 
-    public boolean isPub_priv() {
+    public boolean getPub_priv() {
         return pub_priv;
     }
 

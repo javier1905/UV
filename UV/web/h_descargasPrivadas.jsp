@@ -2,24 +2,17 @@
     Document   : h_descargasPrivadas
     Created on : 30-oct-2019, 21:30:40
     Author     : javie
+enctype="multipart/form-data"
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="d" %> 
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>DESCARGAS PRIVADAS</title>
-        
-       <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
-                
-        <script src="WEB-INF/jquery-3.4.1.min.js" type="text/javascript"></script>
-        <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
-        <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
-        <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/> -->    
+ 
         
         <link href="h_descargasPrivadas.css" rel="stylesheet" type="text/css"/>
         <script src="h_descargasPrivadas.js" type="text/javascript"></script>
@@ -27,7 +20,46 @@
     </head>
     <jsp:include page="z_cabezeraLogin.jsp" ></jsp:include>
     <jsp:include page="x_menu.jsp" ></jsp:include>
-    <body>        
+    <body>
+        
+        <form method="post" action="d_servletDescargas" enctype="multipart/form-data">
+            <center>
+                <table border="1" width="25%" cellpadding="5">
+                    <thead> 
+                            <th colspan="3">Upload File</th>        
+                    </thead>
+                    <tbody>
+                        <tr>    
+                            <td>Title : </td>
+                            <td><input type="text" name="detalle" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td>Choose File : </td>
+                            <td><input type="file" name="file_uploaded" /></td>
+                        </tr>
+                        <tr>
+                            <td>Choose File : </td>
+                            <td><input type="checkbox" name="pub_priv" /></td>
+                        </tr>
+                        <tr>
+                            <td>Choose File : </td>
+                            <td>
+                        <select name="idMateria" class="form-control form-control-lg" value="">
+                           <d:forEach items="${vecMaterias}" var="mat">
+                               <option value="${mat.id}">${mat.nombre}</option>            
+                           </d:forEach>
+                       </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><center><input type="submit" value="Upload"></center></td>
+                        </tr>
+                    </tbody>             
+                </table>
+            </center>
+        </form>
+
+        
         <div id="accordion">
           
           <h3>Section 1</h3>

@@ -11,7 +11,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>   
                 
-        <script src="WEB-INF/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <%-- <script src="WEB-INF/jquery-3.4.1.min.js" type="text/javascript"></script> --%>
         <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
         <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
         <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +30,7 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">ID</th>
+              <th scope="col">ID ALUMNO</th>
               <th scope="col">NOMBRE</th>
               <th scope="col">APELLIDO</th>  
               <th scope="col">DNI</th>
@@ -50,9 +50,9 @@
                       <td>${insc.alumno.apellido}</td>
                       <td>${insc.alumno.dni}</td>
                       <td>${insc.materia.nombre}</td>
-                      <td><a href="d_servletProfesores?dat=${insc.id}" class="btn btn-outline-success" name="editar">EDITAR</a></td>
+                      <td><a href="e_servletInscripciones?dat=${insc.id}" class="btn btn-outline-success" name="editar">EDITAR</a></td>
                       <td>
-                          <form method="POST" action="d_servletListarProfesores">    
+                          <form method="POST" action="e_servletListarInscripciones">    
                               <input type="hidden" value="${insc.id}" name="txt_idEliminar" id="txt_idEliminar">
                               <input type="submit" value="ELIMINAR" class="btn btn-outline-danger">
                           </form>                      

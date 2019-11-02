@@ -10,20 +10,23 @@
         <script src="j_fomrInscipcion.js" type="text/javascript"></script>
     </head>
      <jsp:include page="z_cabezeraLogin.jsp" ></jsp:include> 
+     
     <body>
         <h1>INSCRIBIR</h1>
         <div class="formulario">
             <form action="e_servletInscripciones" method="POST" id="formularioVenta">
-                <input type="hidden" name="id"  id="txt_id" value="${listaClientesVentas.venta.id}">		
+                <input type="hidden" name="id"  id="txt_id" value="${materiaAlumno.inscripcion.id}">
+               
                 <label for="">Alumno</label>           
-                <select name="id_alumno" class="form-control form-control-lg" value="${listaClientesVentas.venta.cliente.id}">
+                <select name="id_alumno" class="form-control form-control-lg" value="${materiaAlumno.inscripcion.alumno.legajo}" id="list_alumnos">
+                    
                     <d:forEach items="${materiaAlumno.vecAlumnos}" var="alu">
                         <option value="${alu.legajo}">${alu.nombre} - ${alu.apellido} - ${alu.dni}</option>            
                     </d:forEach>
                 </select>
                 
                 <label for="">Materia</label>           
-                <select name="id_profesor" class="form-control form-control-lg" value="${listaClientesVentas.venta.cliente.id}">
+                <select name="id_materia" class="form-control form-control-lg" value="${materiaAlumno.inscripcion.materia.id}" id="lista_materias">
                     <d:forEach items="${materiaAlumno.vecMaterias}" var="mat">
                         <option value="${mat.id}">${mat.nombre}</option>            
                     </d:forEach>
@@ -39,4 +42,5 @@
             </form>
         </div>
     </body>
+    <script src="j_fomrInscipcion.js" type="text/javascript"></script>
 </html>

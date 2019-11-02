@@ -19,6 +19,7 @@ public class MateriasAlumnos {
         
         vecMaterias=new ArrayList<>();
         vecMaterias=gm.listarMaterias();
+        inscripcion=new Inscripcion();
     }
 
     public Inscripcion getInscripcion() {

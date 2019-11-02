@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import modelo.Alumno;
+import modelo.Materia;
 
 public class GestorAlumnos {
         Conexion con;
@@ -50,6 +51,35 @@ public class GestorAlumnos {
         
         return vec;
     }
+    
+    public ArrayList<Alumno> listarAlumnosXmateria(Materia m) 
+    {
+        ArrayList<Alumno> vec=new ArrayList<Alumno>();
+        
+        try
+        {   
+           con.conectar();
+           Statement st=con.getConnection().createStatement();
+           ResultSet r=st.executeQuery("select a.legajo, a.nombre, a.apellido, a.dni "
+                   + "from alumno a "
+                   + "inner join inscripcion i on a.legajo=i.id_alumno "
+                   + "where i.estado=1 and i.id_materia="+m.getId());
+           while(r.next())
+           {
+               Alumno a=new Alumno();
+               a.setLegajo(r.getInt(1));
+               a.setNombre(r.getString(2));
+               a.setApellido(r.getString(3));
+               a.setDni(r.getInt(4));
+               vec.add(a);
+           }
+           r.close();
+           con.desconectar();
+        }catch(SQLException e)  { System.out.println("Error de conexion");  }
+        
+        return vec;
+    }
+    
     public void eliminarAlumno(int idAlumno)
     {
         try{

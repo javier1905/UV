@@ -73,7 +73,7 @@ public class GestorInscripciones {
         try
         {           
             con.conectar();
-           PreparedStatement ps=con.getConnection().prepareStatement("update  inscripcion set id_alumno=?, id_materia=? where id=? ");
+           PreparedStatement ps=con.getConnection().prepareStatement("update inscripcion set id_alumno=?, id_materia=? where id=?");
            ps.setInt(1, i.getAlumno().getLegajo());
            ps.setInt(2, i.getMateria().getId()); 
            ps.setInt(3, i.getId());
@@ -113,4 +113,5 @@ public class GestorInscripciones {
         catch(SQLException ex){ }
         return i;
     }
+    
 }
