@@ -9,11 +9,25 @@ public class Recurso {
     private byte[] archivo;
     private boolean pub_priv;
     private Materia materia;
+    private int cantDescargas;
 
     public Recurso() {
         materia=new Materia();
+        cantDescargas=0;
     }
 
+    public boolean isPub_priv() {
+        return pub_priv;
+    }
+
+    public int getCantDescargas() {
+        return cantDescargas;
+    }
+
+    public void setCantDescargas(int cantDescargas) {
+        this.cantDescargas = cantDescargas;
+    }   
+    
     public int getId() {
         return id;
     }

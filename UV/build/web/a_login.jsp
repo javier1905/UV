@@ -18,6 +18,7 @@
         <script src="a_login.js" type="text/javascript"></script>
     </head>
     <body>
+        <a class="nav-link" href="index.jsp" id="ind">INDEX</a>
         <h1>Login</h1>
         <div class="logueo">
             <form method="POST" action="LoginServlet" id="formularioLogin">

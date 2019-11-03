@@ -1,18 +1,19 @@
 package servlet;
 
-import controlador.GestorAlumnosXmaterias;
+import controlador.GestorRecursos;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import modelo.Recurso;
 import modelo.Usuario;
 
-
-@WebServlet(name = "f_servletListarAlumnosxMateria", urlPatterns = {"/f_servletListarAlumnosxMateria"})
-public class f_servletListarAlumnosxMateria extends HttpServlet {
+@WebServlet(name = "g_servletListarRecursosCantDescargas", urlPatterns = {"/g_servletListarRecursosCantDescargas"})
+public class g_servletListarRecursosCantDescargas extends HttpServlet {
     
     private boolean verificarLogin(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException
     {
@@ -41,23 +42,27 @@ public class f_servletListarAlumnosxMateria extends HttpServlet {
         
         if(admin.equalsIgnoreCase("admin"))
         {
-            GestorAlumnosXmaterias gestorAxMateias=new GestorAlumnosXmaterias();
-            request.setAttribute("vecAlumnoXmaterias", gestorAxMateias.listarMateriasConInscripciones());
-            RequestDispatcher rd=request.getRequestDispatcher("/k_listaAlumnosXmateria.jsp");
-            rd.forward(request, response); 
-        }
-        else
-        {
-            response.sendRedirect(""); 
-        }
+            GestorRecursos gr=new GestorRecursos();
+            ArrayList<Recurso> vecRecursosConDescargas=new ArrayList<Recurso>();
+            vecRecursosConDescargas= gr.listaRecursosMasCantidadDescarga();
+            request.setAttribute("vecRecursoParam",vecRecursosConDescargas );
 
-      
+            RequestDispatcher rd=request.getRequestDispatcher("/l_reporteDescargasRecursos.jsp");
+            rd.forward(request, response);  
+        }else
+        {
+            response.sendRedirect("");
+        }
+        
+
+       
+       
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-      
+        
     }
 
 

@@ -1,12 +1,3 @@
-<%-- 
-    Document   : x_menu
-    Created on : 30-oct-2019, 21:15:14
-    Author     : javie
-
-
-f_servletListarAlumnosxMateria
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <div>
@@ -23,8 +14,7 @@ f_servletListarAlumnosxMateria
         <link href="x_menu.css" rel="stylesheet" type="text/css"/>
         <script src="x_menu.js" type="text/javascript"></script>
 </div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu">
-      
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu">     
 
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -91,13 +81,11 @@ f_servletListarAlumnosxMateria
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="f_servletListarAlumnosxMateria">LISTA DE ALUMNOS X MATERIA</a>
-              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="g_servletListarRecursosCantDescargas">DESCARGAS MATERIAL PUBLICO</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>
         </ul>
       </div>

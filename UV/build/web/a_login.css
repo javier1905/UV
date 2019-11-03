@@ -24,7 +24,15 @@ h1
     text-align: center;
     border-bottom: gray solid 1px;
     box-shadow: gray   1px 1px 5px;
+    border-top: none;
 }
 #btn_submit{
     padding: 15px;
+}
+#ind 
+{
+    display: block !important;
+    width: 50px !important;
+    border: none !important;
+    float: left;
 }
