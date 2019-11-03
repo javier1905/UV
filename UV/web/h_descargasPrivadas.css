@@ -1,2 +1,29 @@
+.formulario
+{
+    display: block;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#btn_submit
+{
+    margin-top: 20px;
+}
+h1{
+        display: block;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#subida_arch
+{
+    margin-top: 20px;
+    height: 25px;
+    
+}
+#inputGroupFile03
+{
+    padding: 10px;
+}
 
 

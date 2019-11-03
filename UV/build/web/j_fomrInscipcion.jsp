@@ -30,9 +30,7 @@
                     <d:forEach items="${materiaAlumno.vecMaterias}" var="mat">
                         <option value="${mat.id}">${mat.nombre}</option>            
                     </d:forEach>
-                </select>
-
-                
+                </select>             
 
                   
                 <div class="alert alert-danger" role="alert" id="cajaError">

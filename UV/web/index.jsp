@@ -132,11 +132,20 @@
     
 
     <body>
-       
-          <div>
-              <div><img src="iconos/utn.jpg" title="Funky roots"></div>             
-           
-            </div>  
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="iconos/utn.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="iconos/pc.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="iconos/tup.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+            </div>
+  
     
         
     </body>
