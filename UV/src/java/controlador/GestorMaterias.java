@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import modelo.Alumno;
 import modelo.Materia;
 
 public class GestorMaterias {
@@ -55,7 +56,61 @@ public class GestorMaterias {
         {   
            con.conectar();
            Statement st=con.getConnection().createStatement();
-           ResultSet r=st.executeQuery("select distinct m.id, m.nombre from inscripcion i inner join materia m on  i.id_materia=m.id where i.estado=1");
+           ResultSet r=st.executeQuery("select distinct m.id, m.nombre from inscripcion i "
+                   + "inner join materia m on  i.id_materia=m.id "
+                   + "where i.estado=1");
+           while(r.next())
+           {
+               Materia m=new Materia();
+               m.setId(r.getInt(1));
+               m.setNombre(r.getString(2));
+               vec.add(m);
+           }
+           r.close();
+           con.desconectar();
+        }catch(SQLException e)  { System.out.println("Error de conexion");  }
+        
+        return vec;
+    }
+    
+    public ArrayList<Materia> listarMateriasConRecursosaPUBLICOS() 
+    {
+        ArrayList<Materia> vec=new ArrayList<Materia>();
+        
+        try
+        {   
+           con.conectar();
+           Statement st=con.getConnection().createStatement();
+           ResultSet r=st.executeQuery("select distinct m.id, m.nombre "
+                   + "from recurso r "
+                   + "inner join materia m on r.id_materia=m.id "
+                   + "where r.estado=1  and r.pub_priv=0");
+           while(r.next())
+           {
+               Materia m=new Materia();
+               m.setId(r.getInt(1));
+               m.setNombre(r.getString(2));
+               vec.add(m);
+           }
+           r.close();
+           con.desconectar();
+        }catch(SQLException e)  { System.out.println("Error de conexion");  }
+        
+        return vec;
+    }
+    public ArrayList<Materia> listarMateriasxAlumnoINSCRIPTO(Alumno a) 
+    {
+        ArrayList<Materia> vec=new ArrayList<Materia>();
+        
+        try
+        {   
+           con.conectar();
+           Statement st=con.getConnection().createStatement();
+           ResultSet r=st.executeQuery("select distinct m.id, m.nombre "
+                   + "from inscripcion i "
+                   + "inner join materia m on i.id_materia=m.id "
+                   + "inner join alumno a on i.id_alumno=a.legajo "
+                   + "where i.estado=1 and i.id_alumno="+a.getLegajo());
            while(r.next())
            {
                Materia m=new Materia();
@@ -94,7 +149,8 @@ public class GestorMaterias {
         }
         catch(SQLException ex){ }
     }
-        public Materia obtenerMateria(int id)
+    
+    public Materia obtenerMateria(int id)
     {
         Materia m=new Materia();
         try

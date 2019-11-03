@@ -6,7 +6,7 @@ public class Recurso {
     private String titulo;
     private String detalle;
     private String formato;
-    private byte[] archivo;
+    private String archivo;
     private boolean pub_priv;
     private Materia materia;
     private int cantDescargas;
@@ -44,7 +44,7 @@ public class Recurso {
         return formato;
     }
 
-    public byte[] getArchivo() {
+    public String getArchivo() {
         return archivo;
     }
 
@@ -72,7 +72,7 @@ public class Recurso {
         this.formato = formato;
     }
 
-    public void setArchivo(byte[] archivo) {
+    public void setArchivo(String archivo) {
         this.archivo = archivo;
     }
 
