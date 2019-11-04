@@ -19,6 +19,12 @@ public class RecursosMateria {
        GestorRecursos ga=new GestorRecursos();
        listaRecursos=ga.listaRecursosPUBLICOPorMateria(materia);
    }
+       
+   public void llenarVecAlumonsRecursosPRIVADOS()
+   {
+       GestorRecursos ga=new GestorRecursos();
+       listaRecursos=ga.listaRecursosPRIVADOSPorMateria(materia);
+   }
 
     public void setMateria(Materia materia) {
         this.materia = materia;

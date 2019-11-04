@@ -65,7 +65,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="h_servletDescargasPublicas">MATERIAL PUBLICO</a>           
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/UV/h_descargasPrivadas.jsp">MATERIAL PRIVADO</a>
+              <a class="dropdown-item" href="i_servletListarDescargasPrivadas">MATERIAL PRIVADO</a>
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -73,9 +73,8 @@
               INSCRIPCIONES
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="e_servletListarInscripciones">LISTA DE INSCRIPCIONES</a>           
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="/UV/h_descargasPrivadas.jsp">MATERIAL PRIVADO</a>
+              <a class="dropdown-item" href="e_servletListarInscripciones">LISTA DE INSCRIPCIONES</a>          
+
             </div>
           </li>
             <li class="nav-item dropdown">

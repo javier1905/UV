@@ -128,4 +128,5 @@ public class GestorAlumnos {
         catch(SQLException ex){ }
         return a;
     }
+
 }
