@@ -1,8 +1,13 @@
 package controlador;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import modelo.Alumno;
+import modelo.Descarga;
+import modelo.Materia;
 
 
 public class GestorDescargas {
@@ -37,6 +42,34 @@ public class GestorDescargas {
         ps.executeUpdate();
         con.desconectar();
         }catch(SQLException e){}
+    }
+
+        public ArrayList<Descarga> listadoDescargasPorAlumnoYmaterias(String nombre_alumno, String apellido_alumno) 
+    {
+        ArrayList<Descarga> vec=new ArrayList<Descarga>();
+        
+        try
+        {   
+           con.conectar();
+           Statement st=con.getConnection().createStatement();
+           ResultSet r=st.executeQuery("exec pa_porcenDescargaxMateria '"+nombre_alumno+"' , '"+apellido_alumno+"'");
+           while(r.next())
+           {
+               Descarga d=new Descarga();
+               d.setId(r.getInt(1));
+               d.setFecha(r.getDate(2));
+               d.getRecurso().setTitulo(r.getString(3));
+               d.getRecurso().setFormato(r.getString(4));
+               d.getRecurso().getMateria().setId(r.getInt(5));
+               d.getRecurso().getMateria().setNombre(r.getString(6));
+               d.setPorDescarga(r.getDouble(7));
+               vec.add(d);
+           }
+           r.close();
+           con.desconectar();
+        }catch(SQLException e)  { System.out.println("Error de conexion");  }
+        
+        return vec;
     }
     
 }

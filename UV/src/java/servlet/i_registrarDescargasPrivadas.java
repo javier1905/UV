@@ -44,8 +44,7 @@ public class i_registrarDescargasPrivadas extends HttpServlet {
         }else if(u.getTipoUsuario().equalsIgnoreCase("admin"))
         {
             gd.cargarDescargaPRIVADA(id_recurso,"admin","admin");
-        }
-        
+        }    
         
         
       

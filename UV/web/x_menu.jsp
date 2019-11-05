@@ -86,7 +86,7 @@
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="g_servletListarRecursosCantDescargas">DESCARGAS MATERIAL PUBLICO</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="j_servletListarAlumnoDescargas">LISTA PORCENTAGE DE DESCARGA ALUMNOS</a>
             </div>
           </li>
         </ul>

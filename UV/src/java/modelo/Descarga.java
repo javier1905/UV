@@ -7,12 +7,23 @@ public class Descarga {
     private Date  fecha;
     private Alumno alumno;
     private Recurso recurso;
+    private double porDescarga;
     private int estado;
 
     public Descarga() {
         alumno=new Alumno();
         recurso=new Recurso();
     }
+
+    public double getPorDescarga() {
+        return porDescarga;
+    }
+
+    public void setPorDescarga(double porDescarga) {
+        this.porDescarga = porDescarga;
+    }
+    
+    
 
     public int getId() {
         return id;
