@@ -14,7 +14,7 @@ public class GestorMaterias {
     public GestorMaterias() {
       con=Conexion.getInstance();
     }
-        public void cargarMateria(Materia m)
+    public void cargarMateria(Materia m)
     {
         try
         {

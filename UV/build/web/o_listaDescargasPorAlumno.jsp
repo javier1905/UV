@@ -15,6 +15,9 @@
         <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
         <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
         <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
+        
+        <link href="o_listaDescargasPorAlumno.css" rel="stylesheet" type="text/css"/>
+        
     </head>
     <jsp:include page="z_cabezeraLogin.jsp" ></jsp:include>
     <jsp:include page="x_menu.jsp" ></jsp:include>
@@ -35,8 +38,17 @@
                         <td>${des.id}</td>
                         <td>${des.fecha}</td>
                         <td>${des.recurso.titulo}</td>
-                        <td>${des.recurso.materia.nombre}</td>
-                        <td>${des.porDescarga}</td>
+                        <td>${des.recurso.materia.nombre}</td>              
+               
+                        <g:choose> 
+                            <g:when test="${des.porDescarga<50}">
+                                <td class="menos50">${des.porDescarga}</td>
+                            </g:when>
+                            <g:otherwise>
+                                  <td class="mas50">${des.porDescarga}</td>
+                            </g:otherwise>                 
+                        </g:choose>                       
+                    
                     </tr>              
                 </g:forEach>
             </tbody>
