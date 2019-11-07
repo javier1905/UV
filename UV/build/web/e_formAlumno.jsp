@@ -15,6 +15,7 @@
         <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
         <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
         
+        <link href="e_formAlumno.css" rel="stylesheet" type="text/css"/>
         <script src="e_formAlumno.js" type="text/javascript"></script>
     </head>
         <jsp:include page="z_cabezeraLogin.jsp" ></jsp:include>    

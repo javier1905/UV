@@ -1,0 +1,21 @@
+.formulario
+{
+    width: 500px;
+}
+input
+{
+    margin-bottom: 20px;
+}
+html
+{
+    padding-left: 20px;
+   
+}
+#cajaError{
+    margin-top: 20px;
+}
+#btn_submit{
+    margin-top: 20px;
+    width: 100%;
+    height: 70px;
+}

@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>DESCARGAS PRIVADAS</title>   
+        <title>ALTA RECURSOS</title>   
         
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,13 +12,17 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
+                <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
+        <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
+        <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
+        
         <link href="h_descargasPrivadas.css" rel="stylesheet" type="text/css"/>
      <script src="h_subirRecurso.js" type="text/javascript"></script>
     </head>
     <jsp:include page="z_cabezeraLogin.jsp" ></jsp:include>
     <jsp:include page="x_menu.jsp" ></jsp:include>
     <body>
-        <h1>INSERCISCON DE RECURSO</h1>
+        <h1>ALTA RECURSOS</h1>
         <br>
         <form method="post" action="d_servletSubirMaterial" enctype="multipart/form-data" class="formulario">
           
@@ -28,8 +32,9 @@
             <input type="text" name="detalle" id="txt_detalle" class="form-control form-control-lg">
             <label for="">Formato</label>
             <input type="text" name="formato" id="txt_formato" class="form-control form-control-lg">
-            <label for="">Publico o privado</label>
+            <label for="">Publico o privado</label>            
             <input type="checkbox" name="pub_priv" id="cbx_puv_priv" class="form-control form-control-lg" value="false">
+            <div class="fin"></div>
             <select name="idMateria" class="form-control form-control-lg" value="" class="form-control form-control-lg">
                <d:forEach items="${vecMaterias}" var="mat">
                    <option value="${mat.id}">${mat.nombre}</option>            
@@ -44,7 +49,7 @@
                 <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
               </div>
            </div>
-           <input type="submit" value="GUARDAR" id="btn_submit" class="btn btn-primary">
+           <input type="submit" value="SUBIR MATERIAL" id="btn_submit" class="btn btn-primary">
         </form>
     </body>
 </html>
