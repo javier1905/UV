@@ -63,7 +63,14 @@ public class d_servletSubirMaterial extends HttpServlet {
         RequestDispatcher rs = request.getRequestDispatcher("h_subirRecurso.jsp");
         rs.include(request, response); 
         }
-        else
+         if (admin.equalsIgnoreCase("profesor"))
+         {
+         GestorMaterias gm=new GestorMaterias();
+        request.setAttribute("vecMaterias", gm.listarMateriasPorProfesor(u.getUsuario()));
+        RequestDispatcher rs = request.getRequestDispatcher("h_subirRecurso.jsp");
+        rs.include(request, response); 
+             
+         }else
         {
             response.sendRedirect(""); 
 
@@ -132,32 +139,7 @@ public class d_servletSubirMaterial extends HttpServlet {
          }
          return null;
      }
-//     private Long getMaxAttachmentId(Connection conn) throws SQLException 
-//     {
-//         String sql = "Select max(a.id) from Attachment a";
-//         PreparedStatement pstm = conn.prepareStatement(sql);
-//         ResultSet rs = pstm.executeQuery();
-//         if (rs.next()) {
-//             long max = rs.getLong(1);
-//             return max;
-//         }
-//         return 0L;
-//     }
-//     
-//       private void writeToDB(Connection conn, String fileName, InputStream is, String description) throws SQLException 
-//       {
-//
-//             String sql = "Insert into Attachment(Id,File_Name,File_Data,Description) " //
-//                     + " values (?,?,?,?) ";
-//             PreparedStatement pstm = conn.prepareStatement(sql);
-//
-//             Long id = this.getMaxAttachmentId(conn) + 1;
-//             pstm.setLong(1, id);
-//             pstm.setString(2, fileName);
-//             pstm.setBlob(3, is);
-//             pstm.setString(4, description);
-//             pstm.executeUpdate();
-//        }
+
      
 }
 

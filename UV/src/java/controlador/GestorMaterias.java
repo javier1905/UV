@@ -47,6 +47,30 @@ public class GestorMaterias {
         
         return vec;
     }
+        public ArrayList<Materia> listarMateriasPorProfesor(int idProfesor) 
+    {
+        ArrayList<Materia> vec=new ArrayList<Materia>();
+        
+        try
+        {   
+           con.conectar();
+           Statement st=con.getConnection().createStatement();
+           ResultSet r=st.executeQuery("select * from materia m "
+                   + "inner join materiaXprofesor mp on mp.id_materia=m.id "
+                   + "where mp.id_profesor="+idProfesor+" and m.estado=1");
+           while(r.next())
+           {
+               Materia m=new Materia();
+               m.setId(r.getInt(1));
+               m.setNombre(r.getString(2));
+               vec.add(m);
+           }
+           r.close();
+           con.desconectar();
+        }catch(SQLException e)  { System.out.println("Error de conexion");  }
+        
+        return vec;
+    }
     
     public ArrayList<Materia> listarMateriasConInscripciones() 
     {

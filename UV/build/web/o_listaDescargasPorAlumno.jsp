@@ -22,7 +22,7 @@
     <jsp:include page="z_cabezeraLogin.jsp" ></jsp:include>
     <jsp:include page="x_menu.jsp" ></jsp:include>
     <body>
-        <h1>LISTA DE DESCARGAS POR MATERIA Y ALUMNO </h1>
+        <h1>% DE DESCARGAS DEL ALUMNO SELECIONADO </h1>
          <table class="table">
             <thead>
                 <th>ID DESCARGA</th>

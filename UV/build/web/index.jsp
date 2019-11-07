@@ -51,7 +51,7 @@
         </div>            
                     
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu">     
+  <!--  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu">     
 
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -124,6 +124,88 @@
               <a class="dropdown-item" href="g_servletListarRecursosCantDescargas">DESCARGAS MATERIAL PUBLICO</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="menu">     
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.jsp">INDEX <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="d_servletSubirMaterial">SUBIR MATERIAL <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              MATERIAS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="b_servletListarMaterias">LISTA DE MATERIAS</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              PROFESORES
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="d_servletListarProfesores">LISTA DE PROFESORES</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ALUMNOS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="c_servletListarAlumnos">LISTA DE ALUMNOS</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              DESCARGAS
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="h_servletDescargasPublicas">MATERIAL PUBLICO</a>           
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="i_servletListarDescargasPrivadas">MATERIAL PRIVADO</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              INSCRIPCIONES
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="e_servletListarInscripciones">LISTA DE INSCRIPCIONES</a>          
+              <a class="dropdown-item" href="l_servletAsignarProfeMateria">ASIGNAR PROFESOR A MATERIAS</a> 
+            </div>
+            
+                       
+
+           
+          </li>
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              REPORTES
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="f_servletListarAlumnosxMateria">LISTA DE ALUMNOS X MATERIA</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="g_servletListarRecursosCantDescargas">DESCARGAS MATERIAL PUBLICO</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="j_servletListarAlumnoDescargas">LISTA PORCENTAGE DE DESCARGA ALUMNOS</a>
             </div>
           </li>
         </ul>
