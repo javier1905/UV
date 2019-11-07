@@ -22,7 +22,8 @@
         <jsp:include page="z_cabezeraLogin.jsp" ></jsp:include>
     
     <body>
-        <h1 id="tituloProfesor">Profesor</h1>
+        <a class="btn btn-light" href="index.jsp" id="ind">INDEX</a>
+        <h1 id="tituloProfesor">PROFESOR</h1>
         <br>
         <div class="formulario">
             <form action="d_servletProfesores" method="POST" id="formularioProfesor">

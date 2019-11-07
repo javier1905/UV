@@ -12,6 +12,7 @@
      <jsp:include page="z_cabezeraLogin.jsp" ></jsp:include> 
      
     <body>
+        <a class="btn btn-light" href="index.jsp" id="ind">INDEX</a>
         <h1>INSCRIBIR</h1>
         <div class="formulario">
             <form action="e_servletInscripciones" method="POST" id="formularioVenta">

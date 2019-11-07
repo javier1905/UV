@@ -27,10 +27,10 @@ public class Conexion
             try
             {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
-//            c=DriverManager.getConnection("jdbc:sqlserver://DESKTOP-G1I097C:1433;databaseName=UV6","DBjav","belgrano455");
+            c=DriverManager.getConnection("jdbc:sqlserver://DESKTOP-G1I097C:1433;databaseName=UV6","DBjav","belgrano455");
          //   c=DriverManager.getConnection("jdbc:sqlserver://PC2360:1433;databaseName=UV6","emsDB","belgrano455");
  //         c=DriverManager.getConnection("jdbc:sqlserver://pc2360:1433;databaseName=licencias","emsDB","belgrano455");
- c=DriverManager.getConnection("jdbc:sqlserver://PC2360:1433;databaseName=UV7","emsDB","belgrano455");
+// c=DriverManager.getConnection("jdbc:sqlserver://PC2360:1433;databaseName=UV7","emsDB","belgrano455");
             }
             catch(SQLException ex)  {   }
             catch(ClassNotFoundException ex) {  }

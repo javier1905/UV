@@ -31,9 +31,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="b_servletListarMaterias">LISTA DE MATERIAS</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+         
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -42,9 +40,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="d_servletListarProfesores">LISTA DE PROFESORES</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+      
             </div>
           </li>
           <li class="nav-item dropdown">
@@ -53,9 +49,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="c_servletListarAlumnos">LISTA DE ALUMNOS</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+     
             </div>
           </li>
           <li class="nav-item dropdown">

@@ -23,7 +23,7 @@ $(document).ready(function(){
         
         });
         
-            function valida()
+    function valida()
     {
         var bandera= true;
          var mensaje="";

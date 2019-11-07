@@ -22,9 +22,10 @@
     <jsp:include page="z_cabezeraLogin.jsp" ></jsp:include>
     <jsp:include page="x_menu.jsp" ></jsp:include>
     <body>
+        <a class="btn btn-light" href="index.jsp" id="ind">INDEX</a>
         <h1>ALTA RECURSOS</h1>
         <br>
-        <form method="post" action="d_servletSubirMaterial" enctype="multipart/form-data" class="formulario">
+        <form method="post" action="d_servletSubirMaterial" enctype="multipart/form-data" class="formulario" id="formularioAlta">
           
             <%--<label for="">Titulo</label>
             <input type="text" name="titulo" id="txt_titulo" class="form-control form-control-lg">--%>
@@ -35,7 +36,7 @@
             <label for="">Publico o privado</label>            
             <input type="checkbox" name="pub_priv" id="cbx_puv_priv" class="form-control form-control-lg" value="false">
             <div class="fin"></div>
-            <select name="idMateria" class="form-control form-control-lg" value="" class="form-control form-control-lg">
+            <select name="idMateria" class="form-control form-control-lg" value="" class="form-control form-control-lg" id="cbx_materias">
                <d:forEach items="${vecMaterias}" var="mat">
                    <option value="${mat.id}">${mat.nombre}</option>            
                </d:forEach>           
@@ -49,7 +50,11 @@
                 <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
               </div>
            </div>
+            <div class="alert alert-danger" role="alert" id="cajaError">
+                <p>Verifique que esten cargados todos los elemnetos</p>
+            </div>
            <input type="submit" value="SUBIR MATERIAL" id="btn_submit" class="btn btn-primary">
         </form>
+            
     </body>
 </html>

@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>MATERIA</title>
         
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -22,9 +22,11 @@
     </head>
     <jsp:include page="z_cabezeraLogin.jsp" ></jsp:include>
     <body>
+         <a class="btn btn-light" href="index.jsp" id="ind">INDEX</a>
         <h1>MATERIA</h1>
         <br> 
         <div class="formulario">
+                
             <form action="b_servletMaterias" method="POST" id="formularioMateria">
                 <input type="hidden" name="txt_id"  id="txt_id" value="${materiaAeditar.id}">
 		<label for="" class="">NOMBRE</label>
@@ -34,6 +36,7 @@
                 </div>
                 <input type="submit" value="ENVIAR" class="btn btn-primary" id="btn_submit">
             </form>
+                
         </div>
         
     </body>

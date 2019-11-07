@@ -38,6 +38,13 @@ input[type='checkbox']
     margin-top: 20px;
     width: 100%;
     height: 70px;
+    margin-bottom: 15px;
+}
+#cajaError
+{
+    margin-top: 30px;
+    margin-bottom: 15px;
+        
 }
 
 

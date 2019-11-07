@@ -15,10 +15,15 @@
         <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" type="text/css"/>
         <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.structure.min.css" rel="stylesheet" type="text/css"/>
         <link href="WEB-INF/jquery-ui-1.12.1/jquery-ui.theme.min.css" rel="stylesheet" type="text/css"/>
-    </head>
-    <body>
-        <h1>ASIGNAR PROFESOR A MATERIA</h1>
         
+        <link href="k_formAsignarProfMat.css" rel="stylesheet" type="text/css"/>
+    </head>
+        <jsp:include page="z_cabezeraLogin.jsp" ></jsp:include>
+        <jsp:include page="x_menu.jsp" ></jsp:include>
+    <body> 
+        <br>
+        <h1>ASIGNAR PROFESOR A MATERIA</h1>
+        <br>
         <div class="formulario">
             <form action="l_servletAsignarProfeMateria" method="POST" id="formularioMateria">
                 <input type="hidden" name="txt_id"  id="txt_id" value="IDPROFEMATERIA">
@@ -37,7 +42,7 @@
                 <!--<div class="alert alert-danger" role="alert" id="cajaError">
                     <p>Verifique que esten cargados todos los elemnetos</p>
                 </div>-->
-		<input type="submit" value="ENVIAR" class="btn btn-primary">
+                <input type="submit" value="ENVIAR" class="btn btn-primary" id="btn_submit">
             </form>
         </div>
     </body>
